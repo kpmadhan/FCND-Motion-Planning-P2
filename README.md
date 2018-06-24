@@ -55,7 +55,7 @@ This is another step in adding flexibility to the start location. As long as it 
 ```
 grid_start = (int(np.ceil(local_north - north_offset)), int(np.ceil(local_east - east_offset)))
 ```
-![motion planning screenshot two](./misc/images/three.png)
+![motion planning screenshot two](./misc/images/four.png)
 #### 4. Set grid goal position from geodetic coords
 This step is to add flexibility to the desired goal location. Should be able to choose any (lat, lon) within the map and have it rendered to a goal location on the grid.
 ```
@@ -124,4 +124,4 @@ def prune(path, epsilon=1e-6):
 #### 1. Does it work?
 It works!
 
-![Landing](./misc/images/four.png)
+![Landing](./misc/images/three.png)

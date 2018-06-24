@@ -1,16 +1,13 @@
 ## Project: 3D Motion Planning
-![Quad Image](./misc/enroute.png)
-
-
 
 ## [Rubric](https://review.udacity.com/#!/rubrics/1534/view) Points
 
 ---
 
 
-### Explain the Starter Code
+### The Starter Code
 
-#### 1. Explain the functionality of what's provided in `motion_planning.py` and `planning_utils.py`
+#### 1. Functionality of what's provided in `motion_planning.py` and `planning_utils.py`
 In the first project (Backyard Flyer) we assumed / did not consider the obstacles there by had a static set of way points. However in a real world scenario , Planning consitutes an important role and it has been incorporated in this project (Motion Planning)
 
 ![backyard flyer vs motion planning state transition](./misc/images/comparison_backyard_Vs_motionplanning.png)

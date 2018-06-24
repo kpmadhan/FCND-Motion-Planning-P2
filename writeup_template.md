@@ -28,7 +28,7 @@ The additional funcationalities in `motion_planning.py` & `planning_utils.py` in
 
 
 ### Implementing Your Path Planning Algorithm
-
+![motion planning screenshot one](./misc/images/two.png)
 #### 1. Set your global home position
 ```
 def retrieve_lat_lon(filename):
@@ -55,7 +55,7 @@ This is another step in adding flexibility to the start location. As long as it 
 ```
 grid_start = (int(np.ceil(local_north - north_offset)), int(np.ceil(local_east - east_offset)))
 ```
-
+![motion planning screenshot two](./misc/images/three.png)
 #### 4. Set grid goal position from geodetic coords
 This step is to add flexibility to the desired goal location. Should be able to choose any (lat, lon) within the map and have it rendered to a goal location on the grid.
 ```
@@ -65,7 +65,7 @@ goal_north, goal_east, goal_down = global_to_local(self.global_goal_position, se
 
 #### 5. Modify A* to include diagonal motion (or replace A* altogether)
 Minimal requirement here is to modify the code in planning_utils() to update the A* implementation to include diagonal motions on the grid that have a cost of sqrt(2), but more creative solutions are welcome. Explain the code you used to accomplish this step.
-
+![motion planning screenshot three](./misc/images/five.png)
 ```
     WEST = (0, -1, 1)
     EAST = (0, 1, 1)
@@ -90,6 +90,9 @@ if x - 1 < 0 or y - 1 < 0 or grid[x-1,y-1] == 1:
 
 #### 6. Cull waypoints 
 For this step you can use a collinearity test or ray tracing method like Bresenham. The idea is simply to prune your path of unnecessary waypoints. Explain the code you used to accomplish this step.
+![Prune](./misc/images/one.png)
+
+
 
 ```
 def prune(path, epsilon=1e-6):
@@ -121,10 +124,4 @@ def prune(path, epsilon=1e-6):
 #### 1. Does it work?
 It works!
 
-### Double check that you've met specifications for each of the [rubric](https://review.udacity.com/#!/rubrics/1534/view) points.
-  
-# Extra Challenges: Real World Planning
-
-For an extra challenge, consider implementing some of the techniques described in the "Real World Planning" lesson. You could try implementing a vehicle model to take dynamic constraints into account, or implement a replanning method to invoke if you get off course or encounter unexpected obstacles.
-
-
+![Landing](./misc/images/four.png)
